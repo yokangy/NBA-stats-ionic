@@ -1,0 +1,25 @@
+{
+  "name": "NBA-stats-ionic",
+  "version": "1.0.0",
+  "description": "Mobile App displaying NBA player stats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yokangy/NBA-stats-ionic.git"
+  },
+  "author": "Yondy Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yokangy/NBA-stats-ionic/issues"
+  },
+  "homepage": "https://github.com/yokangy/NBA-stats-ionic",
+  "dependencies": {
+    "express": "^4.12.3",
+    "morgan": "^1.5.2",
+    "mysql": "^2.6.1",
+    "sequelize": "^2.0.5"
+  }
+}
