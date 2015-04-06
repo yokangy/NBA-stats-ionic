@@ -2,7 +2,7 @@ var Players = require('../models/players.js');
 
 module.exports = {
   get: function(req, res){
-    Players.Players.findAll().then(function(players){
+    Players.Players.findAll({order: 'lastName'}).then(function(players){
       res.status(200).send(players);
     });
   },
