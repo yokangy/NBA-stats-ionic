@@ -2,7 +2,7 @@
   <ion-nav-title>Teams</ion-nav-title>
   <ion-content>
     <div class="card">
-      <a ng-repeat="team in teams" class="item item-icon-right">
+      <a ng-repeat="team in teams" class="item item-icon-right" on-tap="onTap(team.id)" ui-sref="Players">
         {{team.name}}
         <i class="icon ion-ios-arrow-right"></i>
       </a>

@@ -1,9 +1,10 @@
 angular.module('NBAStats.players', [])
 
-.controller('PlayerController', ['$scope', 'PlayerInfo', function($scope, PlayerInfo){
+.controller('PlayerController', ['$scope', 'ChooseInfo', function($scope, ChooseInfo){
   $scope.players = [];
+  $scope.filterValue = ChooseInfo.filterValue;
 
-  PlayerInfo.getPlayers()
+  ChooseInfo.getPlayers()
     .then(function(players){
       console.log(players)
       $scope.players = players;

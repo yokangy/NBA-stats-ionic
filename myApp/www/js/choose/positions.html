@@ -2,7 +2,7 @@
   <ion-nav-title>Positions</ion-nav-title>
   <ion-content>
     <div class="card">
-      <a ng-repeat="position in positions" class="item item-icon-right">
+      <a ng-repeat="position in positions" class="item item-icon-right" on-tap="onTap(position.code)" ui-sref="Players">
         {{position.text}}
         <i class="icon ion-ios-arrow-right"></i>
       </a>

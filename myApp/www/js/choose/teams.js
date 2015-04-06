@@ -1,8 +1,10 @@
 angular.module('NBAStats.teams', [])
 
-.controller('TeamController', ['$scope', 'PlayerInfo', function($scope, PlayerInfo){
+.controller('TeamController', ['$scope', 'ChooseInfo', function($scope, ChooseInfo){
   $scope.teams = [];
-  PlayerInfo.getTeams()
+  ChooseInfo.filterValue = {};
+
+  ChooseInfo.getTeams()
     .then(function(teams){
       console.log(teams);
       $scope.teams = teams;
@@ -10,4 +12,8 @@ angular.module('NBAStats.teams', [])
     .catch(function(err){
       console.log(err);
     });
+
+  $scope.onTap = function(id){
+    ChooseInfo.filterValue.TeamId = id;
+  };
 }]);

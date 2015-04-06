@@ -11,7 +11,8 @@ module.exports.Players = db.define('Players', {
   firstName: Sequelize.STRING,
   lastName: Sequelize.STRING,
   fullName: Sequelize.STRING,
-  primaryPosition: Sequelize.STRING
+  primaryPosition: Sequelize.STRING,
+  TeamId: Sequelize.INTEGER
 });
 
 module.exports.PlayerGameLogs = db.define('playerGameLog', {

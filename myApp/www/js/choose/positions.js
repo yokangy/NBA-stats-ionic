@@ -1,11 +1,19 @@
 angular.module('NBAStats.positions', [])
 
-.controller('PositionController', ['$scope', function($scope){
+.controller('PositionController', ['$scope', 'ChooseInfo', function($scope, ChooseInfo){
   $scope.positions = [
-    {id: 'C', text: 'Center'},
-    {id: 'PF', text: 'Power Forward'},
-    {id: 'SF', text: 'Small Forward'},
-    {id: 'SG', text: 'Shooting Guard'},
-    {id: 'PG', text: 'Point Guard'}, 
-  ]
+    {code: 'C', text: 'Center'},
+    {code: 'PF', text: 'Power Forward'},
+    {code: 'SF', text: 'Small Forward'},
+    {code: 'SG', text: 'Shooting Guard'},
+    {code: 'PG', text: 'Point Guard'}
+  ];
+
+  ChooseInfo.filterValue = {};
+
+  $scope.onTap = function(x){
+    console.log('Im here')
+    console.log(x)
+    ChooseInfo.filterValue.primaryPosition = x;
+  };
 }])

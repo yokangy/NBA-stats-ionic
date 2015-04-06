@@ -1,6 +1,6 @@
 angular.module('NBAStats.services', [])
 
-.factory('PlayerInfo', ['$http', function($http){
+.factory('ChooseInfo', ['$http', function($http){
   var getTeams = function(){
     return $http({
       method: 'GET',
@@ -27,8 +27,11 @@ angular.module('NBAStats.services', [])
     })
   }
 
+  var filterValue = {};
+
   return {
     getTeams: getTeams,
-    getPlayers: getPlayers
+    getPlayers: getPlayers,
+    filterValue: filterValue
   }
 }]);
