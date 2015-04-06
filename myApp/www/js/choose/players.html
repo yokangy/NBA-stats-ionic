@@ -1,8 +1,14 @@
 <ion-view view-title="Players">
   <ion-nav-title>Players</ion-nav-title>
   <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="query">
+      </label>
+    </div>
     <div class="card">
-      <a ng-repeat="player in players | filter: filterValue : true" class="item item-icon-right">
+      <a ng-repeat="player in players | filter: filterValue : true | filter: query" class="item item-icon-right">
         {{player.fullName}}
         <i class="icon ion-ios-arrow-right"></i>
       </a>
