@@ -6,7 +6,6 @@ angular.module('NBAStats.teams', [])
 
   ChooseInfo.getTeams()
     .then(function(teams){
-      console.log(teams);
       $scope.teams = teams;
     })
     .catch(function(err){

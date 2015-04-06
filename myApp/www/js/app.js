@@ -10,7 +10,8 @@ angular.module('NBAStats', [
   'NBAStats.positions',
   'NBAStats.teams',
   'NBAStats.players',
-  'NBAStats.playerStats'
+  'NBAStats.playerAvg',
+  'NBAStats.playerGameLogs'
   ])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
@@ -31,31 +32,19 @@ angular.module('NBAStats', [
       controller: 'TeamController'
     })
     .state('Players', {
-      cache: false,
       url: '/players',
       templateUrl: 'js/choose/players.html',
       controller: 'PlayerController'
     })
-    .state('PlayerStats', {
-      abstract: true,
-      templateUrl: 'js/playerStats/playerStats.html',
-      controller: 'PlayerStatsController'
-    })
-    .state('PlayerStats.avgs', {
+    .state('PlayerAvgs', {
       url: '/avgs',
-      views: {
-        avgs: {
-          templateUrl: 'js/playerStats/playerAvg.html'
-        }
-      }
+      templateUrl: 'js/playerStats/playerAvg.html',
+      controller: 'PlayerAvgController'
     })
-    .state('PlayerStats.gameLogs', {
+    .state('PlayerGameLogs', {
       url: '/gameLogs',
-      views: {
-        gameLogs: {
-          templateUrl: 'js/playerStats/playerGameLogs.html'
-        }
-      }
+      templateUrl: 'js/playerStats/playerGameLogs.html',
+      controller: 'PlayerGameLogsController'
     })
 
   $urlRouterProvider.otherwise('/')

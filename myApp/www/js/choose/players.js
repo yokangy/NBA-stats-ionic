@@ -5,7 +5,6 @@ angular.module('NBAStats.players', [])
   $scope.players = [];
   $scope.filterValue = ChooseInfo.filterValue;
   PlayerInfo.playerData = {};
-  console.log('run')
 
   ChooseInfo.getPlayers()
     .then(function(players){
@@ -16,7 +15,6 @@ angular.module('NBAStats.players', [])
     })
 
   $scope.onTap = function(player){
-    console.log(player)
     PlayerInfo.playerData.id = player.id;
     PlayerInfo.playerData.fullName = player.fullName;
   };

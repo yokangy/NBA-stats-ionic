@@ -8,7 +8,7 @@
       </label>
     </div>
     <div class="card">
-      <a ng-repeat="player in players | filter: filterValue : true | filter: query" class="item item-icon-right" on-tap="onTap(player)" ui-sref="PlayerStats.avgs">
+      <a ng-repeat="player in players | filter: filterValue : true | filter: query" class="item item-icon-right" on-tap="onTap(player)" ui-sref="PlayerAvgs">
         {{player.fullName}}
         <i class="icon ion-ios-arrow-right"></i>
       </a>

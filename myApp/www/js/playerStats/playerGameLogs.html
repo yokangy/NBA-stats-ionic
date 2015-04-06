@@ -1,8 +1,11 @@
 <ion-view view-title="Game Logs">
   <ion-nav-title>{{playerName}}</ion-nav-title>
-  <ion-nav-buttons side="left">
-    <a class="button icon-left ion-ios-arrow-back button-clear button-light" ui-sref="Players">Players</a>
-  </ion-nav-buttons>
+  <ion-tabs class="tabs-dark">
+    <ion-tab title="Season Averages" ui-sref="PlayerAvgs">
+    </ion-tab>
+    <ion-tab title="Game Logs" ui-sref="PlayerGameLogs">
+    </ion-tab>
+  </ion-tabs>
   <ion-content>
     <div class="row">
       <div class="col">Points</div>
