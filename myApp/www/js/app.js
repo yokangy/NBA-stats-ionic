@@ -31,6 +31,7 @@ angular.module('NBAStats', [
       controller: 'TeamController'
     })
     .state('Players', {
+      cache: false,
       url: '/players',
       templateUrl: 'js/choose/players.html',
       controller: 'PlayerController'

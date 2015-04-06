@@ -4,10 +4,11 @@ angular.module('NBAStats.players', [])
   // $scope.players = [{"id":346,"firstName":"LeBron","lastName":"James","fullName":"LeBron James","primaryPosition":"SF","TeamId":17,"createdAt":"2015-02-16T07:31:10.000Z","updatedAt":"2015-02-16T07:31:10.000Z"}];
   $scope.players = [];
   $scope.filterValue = ChooseInfo.filterValue;
+  PlayerInfo.playerData = {};
+  console.log('run')
 
   ChooseInfo.getPlayers()
     .then(function(players){
-      console.log(players)
       $scope.players = players;
     })
     .catch(function(err){
@@ -15,6 +16,7 @@ angular.module('NBAStats.players', [])
     })
 
   $scope.onTap = function(player){
+    console.log(player)
     PlayerInfo.playerData.id = player.id;
     PlayerInfo.playerData.fullName = player.fullName;
   };

@@ -1,6 +1,6 @@
 angular.module('NBAStats.main', [])
 
-.controller('MainController', ['$scope', function($scope){
+.controller('MainController', ['$scope', 'ChooseInfo', function($scope, ChooseInfo){
   $scope.listItems = [{
     pageState: 'Players', 
     pageDesc: 'Name'
@@ -13,4 +13,6 @@ angular.module('NBAStats.main', [])
     pageState: 'Positions',
     pageDesc: 'Position'
   }];
+  
+  ChooseInfo.filterValue = {};
 }]);
