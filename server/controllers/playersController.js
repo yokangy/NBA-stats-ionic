@@ -14,7 +14,7 @@ module.exports = {
   getGameLogs: function(req, res){
     Players.PlayerGameLogs.findAll({
       where: {PlayerId: req.params.playerId},
-      order: 'id'
+      order: [['id', 'DESC']]
     }).then(function(gamelogs){
       res.status(200).send(gamelogs);
     });
