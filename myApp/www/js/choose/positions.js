@@ -11,9 +11,7 @@ angular.module('NBAStats.positions', [])
 
   ChooseInfo.filterValue = {};
 
-  $scope.onTap = function(x){
-    console.log('Im here')
-    console.log(x)
-    ChooseInfo.filterValue.primaryPosition = x;
+  $scope.onTap = function(code){
+    ChooseInfo.filterValue.primaryPosition = code;
   };
 }])

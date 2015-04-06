@@ -1,0 +1,22 @@
+<ion-view view-title="Game Logs">
+  <ion-nav-title>{{playerName}} - Game Logs</ion-nav-title>
+  <ion-nav-buttons side="left">
+    <a class="button icon-left ion-ios-arrow-back button-clear button-light" ng-click="$ionicGoBack($event)">Back</a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="row">
+      <div class="col">Points</div>
+      <div class="col">Rebs</div>
+      <div class="col">Assists</div>
+      <div class="col">Steals</div>
+      <div class="col">Blocks</div>
+    </div>
+    <div class="row" ng-repeat="stats in gameLogs">
+      <div class="col">{{stats.points}}</div>
+      <div class="col">{{stats.rebounds}}</div>
+      <div class="col">{{stats.assists}}</div>
+      <div class="col">{{stats.steals}}</div>
+      <div class="col">{{stats.blocks}}</div>
+    </div>
+  </ion-content>
+</ion-view>

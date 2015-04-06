@@ -3,7 +3,15 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('NBAStats', ['ionic', 'NBAStats.services', 'NBAStats.main', 'NBAStats.positions', 'NBAStats.teams', 'NBAStats.players'])
+angular.module('NBAStats', [
+  'ionic',
+  'NBAStats.services',
+  'NBAStats.main',
+  'NBAStats.positions',
+  'NBAStats.teams',
+  'NBAStats.players',
+  'NBAStats.playerStats'
+  ])
 
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   $stateProvider
@@ -26,6 +34,27 @@ angular.module('NBAStats', ['ionic', 'NBAStats.services', 'NBAStats.main', 'NBAS
       url: '/players',
       templateUrl: 'js/choose/players.html',
       controller: 'PlayerController'
+    })
+    .state('PlayerStats', {
+      abstract: true,
+      templateUrl: 'js/playerStats/playerStats.html',
+      controller: 'PlayerStatsController'
+    })
+    .state('PlayerStats.avgs', {
+      url: '/avgs',
+      views: {
+        avgs: {
+          templateUrl: 'js/playerStats/playerAvg.html'
+        }
+      }
+    })
+    .state('PlayerStats.gameLogs', {
+      url: '/gameLogs',
+      views: {
+        gameLogs: {
+          templateUrl: 'js/playerStats/playerGameLogs.html'
+        }
+      }
     })
 
   $urlRouterProvider.otherwise('/')

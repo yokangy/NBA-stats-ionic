@@ -1,0 +1,46 @@
+<ion-view view-title="Average Stats">
+  <ion-nav-title>{{playerName}} - Average Stats</ion-nav-title>
+  <ion-nav-buttons side="left">
+    <a class="button icon-left ion-ios-arrow-back button-clear button-light" ng-click="$ionicGoBack($event)">Back</a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="card">
+      <div class="row">
+        <div class="col">Season Average</div>
+      </div>
+      <div class="row">
+        <div class="col">Points</div>
+        <div class="col">Rebs</div>
+        <div class="col">Assists</div>
+        <div class="col">Steals</div>
+        <div class="col">Blocks</div>
+      </div>
+      <div class="row">
+        <div class="col">{{playerAvgs.seasonAvgPoints}}</div>
+        <div class="col">{{playerAvgs.seasonAvgRebounds}}</div>
+        <div class="col">{{playerAvgs.seasonAvgAssists}}</div>
+        <div class="col">{{playerAvgs.seasonAvgSteals}}</div>
+        <div class="col">{{playerAvgs.seasonAvgBlocks}}</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row">
+        <div class="col">10 Game Average</div>
+      </div>
+      <div class="row">
+        <div class="col">Points</div>
+        <div class="col">Rebs</div>
+        <div class="col">Assists</div>
+        <div class="col">Steals</div>
+        <div class="col">Blocks</div>
+      </div>
+      <div class="row">
+        <div class="col">{{playerAvgs.tenDayAvgPoints}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgRebounds}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgAssists}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgSteals}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgBlocks}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
