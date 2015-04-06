@@ -3,7 +3,28 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+angular.module('NBAStats', ['ionic', 'NBAStats.services', 'NBAStats.main', 'NBAStats.positions', 'NBAStats.teams'])
+
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+  $stateProvider
+    .state('main', {
+      url: '/',
+      templateUrl: 'js/main/main.html',
+      controller: 'MainController'
+    })
+    .state('Position', {
+      url: '/positions',
+      templateUrl: 'js/choose/position.html',
+      controller: 'PositionController'
+    })
+    .state('Team', {
+      url: '/teams',
+      templateUrl: 'js/choose/team.html',
+      controller: 'TeamController'
+    })
+
+  $urlRouterProvider.otherwise('/')
+}])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
