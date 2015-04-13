@@ -7,6 +7,7 @@ angular.module('NBAStats', [
   'ionic',
   'NBAStats.services',
   'NBAStats.filters',
+  'NBAStats.directives',
   'NBAStats.main',
   'NBAStats.positions',
   'NBAStats.teams',
@@ -46,6 +47,10 @@ angular.module('NBAStats', [
       url: '/gameLogs',
       templateUrl: 'app/playerStats/playerGameLogs.html',
       controller: 'PlayerGameLogsController'
+    })
+    .state('PlayerCharts', {
+      url: '/charts',
+      templateUrl: 'app/playerStats/playerCharts.html'
     })
 
   $urlRouterProvider.otherwise('/')

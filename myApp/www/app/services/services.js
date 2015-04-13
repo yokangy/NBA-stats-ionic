@@ -72,7 +72,7 @@ angular.module('NBAStats.services', [])
   };
 }])
 
-.factory('D3Service', [$document, $q, $rootScope, function($document, $q, $rootScope){
+.factory('D3Service', ['$document', '$q', '$rootScope', function($document, $q, $rootScope){
   var d = $q.defer();
   function onScriptLoad(){
     $rootScope.$apply(function(){ d.resolve(window.d3);});
@@ -86,7 +86,7 @@ angular.module('NBAStats.services', [])
   }
   scriptTag.onload = onScriptLoad;
 
-  var s = $document[0].getElementsByTag('body')[0];
+  var s = $document[0].getElementsByTagName('body')[0];
   s.appendChild(scriptTag);
 
   return {
