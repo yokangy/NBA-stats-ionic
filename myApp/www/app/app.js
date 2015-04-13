@@ -6,6 +6,7 @@
 angular.module('NBAStats', [
   'ionic',
   'NBAStats.services',
+  'NBAStats.filters',
   'NBAStats.main',
   'NBAStats.positions',
   'NBAStats.teams',
@@ -18,32 +19,32 @@ angular.module('NBAStats', [
   $stateProvider
     .state('main', {
       url: '/',
-      templateUrl: 'js/main/main.html',
+      templateUrl: 'app/choose/main.html',
       controller: 'MainController'
     })
     .state('Positions', {
       url: '/positions',
-      templateUrl: 'js/choose/positions.html',
+      templateUrl: 'app/choose/positions.html',
       controller: 'PositionController'
     })
     .state('Teams', {
       url: '/teams',
-      templateUrl: 'js/choose/teams.html',
+      templateUrl: 'app/choose/teams.html',
       controller: 'TeamController'
     })
     .state('Players', {
       url: '/players',
-      templateUrl: 'js/choose/players.html',
+      templateUrl: 'app/choose/players.html',
       controller: 'PlayerController'
     })
     .state('PlayerAvgs', {
       url: '/avgs',
-      templateUrl: 'js/playerStats/playerAvg.html',
+      templateUrl: 'app/playerStats/playerAvg.html',
       controller: 'PlayerAvgController'
     })
     .state('PlayerGameLogs', {
       url: '/gameLogs',
-      templateUrl: 'js/playerStats/playerGameLogs.html',
+      templateUrl: 'app/playerStats/playerGameLogs.html',
       controller: 'PlayerGameLogsController'
     })
 

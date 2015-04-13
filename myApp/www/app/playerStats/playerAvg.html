@@ -19,11 +19,11 @@
         <div class="col">Blocks</div>
       </div>
       <div class="row">
-        <div class="col">{{playerAvgs.seasonAvgPoints}}</div>
-        <div class="col">{{playerAvgs.seasonAvgRebounds}}</div>
-        <div class="col">{{playerAvgs.seasonAvgAssists}}</div>
-        <div class="col">{{playerAvgs.seasonAvgSteals}}</div>
-        <div class="col">{{playerAvgs.seasonAvgBlocks}}</div>
+        <div class="col">{{playerAvgs.seasonAvgPoints | oneDecimal}}</div>
+        <div class="col">{{playerAvgs.seasonAvgRebounds | number: 1}}</div>
+        <div class="col">{{playerAvgs.seasonAvgAssists | number: 1}}</div>
+        <div class="col">{{playerAvgs.seasonAvgSteals | number: 1}}</div>
+        <div class="col">{{playerAvgs.seasonAvgBlocks | number: 1}}</div>
       </div>
     </div>
     <div class="card">
@@ -38,11 +38,11 @@
         <div class="col">Blocks</div>
       </div>
       <div class="row">
-        <div class="col">{{playerAvgs.tenDayAvgPoints}}</div>
-        <div class="col">{{playerAvgs.tenDayAvgRebounds}}</div>
-        <div class="col">{{playerAvgs.tenDayAvgAssists}}</div>
-        <div class="col">{{playerAvgs.tenDayAvgSteals}}</div>
-        <div class="col">{{playerAvgs.tenDayAvgBlocks}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgPoints | number: 1}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgRebounds | number: 1}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgAssists | number: 1}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgSteals | number: 1}}</div>
+        <div class="col">{{playerAvgs.tenDayAvgBlocks | number: 1}}</div>
       </div>
     </div>
   </ion-content>
